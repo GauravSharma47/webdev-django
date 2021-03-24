@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="{% static 'quiz/style.css' %}">
+</head>
+
+<body>
+  <div class="root">
+    <div class="question-head">
+      <p class="question" id="question">This is a simple Question?</p>
+      <ul class="options">
+        <li>
+          <input type="radio" name="option" value="a" checked>
+          <label for="option1" id="a">option 1 might be longer</label>
+        </li>
+        <li>
+          <input type="radio" name="option" value="b">
+          <label for="option2" id="b">option 2 might be longer</label>
+        </li>
+        <li>
+          <input type="radio" name="option" value="c">
+          <label for="option3" id="c">option 3</label>
+        </li>
+        <li>
+          <input type="radio" name="option" value="d">
+          <label for="option4" id="d">option 4</label>
+        </li>
+      </ul>
+    </div>
+
+    <button type="button" name="sumbit" class="btn" id="submit">Sumbit</button>
+  </div>
+</body>
+
+</html>
