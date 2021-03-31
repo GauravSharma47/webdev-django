@@ -1,0 +1,11 @@
+<script>
+    setTimeout(function(){
+       window.location.href = "{% url 'index' %}";
+    }, 5000);
+ </script>
+<h2>Quiz Ended!</h2>
+
+<h4>You scored {{ correct }} out of {{ total }}</h4>
+
+You will be redirected in 5 seconds.
+

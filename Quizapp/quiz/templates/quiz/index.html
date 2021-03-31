@@ -7,33 +7,33 @@
   <title>Quiz App</title>
   <link rel="stylesheet" href="{% static 'quiz/style.css' %}">
 </head>
-
 <body>
   <div class="root">
+    <form action="{% url 'next' number %}" method="POST">{% csrf_token %}
     <div class="question-head">
-      <p class="question" id="question">This is a simple Question?</p>
+      <p class="question" id="question">{{ data.question }}</p>
       <ul class="options">
         <li>
           <input type="radio" name="option" value="a" checked>
-          <label for="option1" id="a">option 1 might be longer</label>
+          <label for="option1" id="a">{{ data.a }}</label>
         </li>
         <li>
           <input type="radio" name="option" value="b">
-          <label for="option2" id="b">option 2 might be longer</label>
+          <label for="option2" id="b">{{ data.b }}</label>
         </li>
         <li>
           <input type="radio" name="option" value="c">
-          <label for="option3" id="c">option 3</label>
+          <label for="option3" id="c">{{ data.c }}</label>
         </li>
         <li>
           <input type="radio" name="option" value="d">
-          <label for="option4" id="d">option 4</label>
+          <label for="option4" id="d">{{ data.d }}</label>
         </li>
       </ul>
     </div>
-
-    <button type="button" name="sumbit" class="btn" id="submit">Sumbit</button>
+    <button type="submit" name="sumbit" class="btn" id="submit">Sumbit</button>
   </div>
+</form>
 </body>
 
 </html>
